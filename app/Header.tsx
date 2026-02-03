@@ -1,7 +1,7 @@
 // app/Header.tsx
 export default function Header() {
     return (
-        <header className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur">
+        <header className="bg-transparent absolute top-0 left-0 w-full z-50 pt-4">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
                 <a href="#" className="text-sm font-semibold tracking-wide">
                     Tradecom
@@ -35,6 +35,6 @@ export default function Header() {
                     </a>
                 </div>
             </div>
-        </header>
+        </header >
     );
 }

@@ -1,41 +1,81 @@
-// app/Hero.tsx
 export default function Hero() {
+    const bgImage =
+        "https://images.squarespace-cdn.com/content/v1/646dc21ed4e3d64741f92bcb/c14750df-5fb2-4c1e-990d-58bddb63d85c/carlos-muza-hpjSkU2UYSU-unsplash.jpg";
+
     return (
-        <section className="relative pb-16 pt-14">
-            <div className="pointer-events-none absolute inset-0 -z-10">
-                <div className="absolute -top-24 left-1/2 h-72 w-[520px] -translate-x-1/2 rounded-full bg-white/10 blur-3xl" />
-                <div className="absolute top-40 left-24 h-56 w-56 rounded-full bg-white/5 blur-3xl" />
-                <div className="absolute top-40 right-24 h-56 w-56 rounded-full bg-white/5 blur-3xl" />
-            </div>
+        // FULL-BLEED WRAPPER: bryter ut ur ev. max-w container i layout/page
+        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen overflow-x-clip">
+            <section className="relative isolate h-screen w-screen overflow-hidden">
+                {/* Background image – fill viewport */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${bgImage})` }}
+                    aria-hidden="true"
+                />
 
-            <div className="max-w-3xl">
-                <p className="text-sm text-white/60">E-handel • Integrationer • Strategi</p>
+                {/* Make image darker (even overlay) */}
+                <div className="absolute inset-0 bg-black/75" aria-hidden="true" />
 
-                <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
-                    Bygg en modern e-handel som känns premium — och skalar.
-                </h1>
+                {/* Optional: a tiny extra contrast without side darkening */}
+                <div
+                    className="absolute inset-0"
+                    aria-hidden="true"
+                    style={{
+                        background:
+                            "linear-gradient(to bottom, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.55) 100%)",
+                    }}
+                />
 
-                <p className="mt-5 text-base text-white/70 md:text-lg">
-                    Vi kombinerar produktfokus med robust teknik, tydlig UX och spårbar data.
-                    Snabbt att lansera. Lätt att vidareutveckla.
-                </p>
+                {/* Content */}
+                <div className="relative flex h-full w-full justify-center">
+                    <div className="w-full max-w-6xl px-6 pt-24 sm:pt-28 lg:pt-32 text-center">
+                        {/* Headline */}
+                        <h1 className="font-serif uppercase tracking-[0.12em] text-white [text-wrap:balance]">
+                            <span className="block text-6xl sm:text-7xl lg:text-[96px] xl:text-[120px] leading-[0.85]">
+                                FIELD{" "}
+                                <span className="text-[#97C46B] drop-shadow-[0_2px_0_rgba(0,0,0,0.35)]">
+                                    MARKETING
+                                </span>
+                            </span>
 
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                    <a
-                        href="#contact"
-                        className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-white/90"
-                    >
-                        Boka intro
-                    </a>
+                            <span className="mt-2 block text-5xl sm:text-6xl lg:text-[80px] xl:text-[96px] leading-[0.9]">
+                                SEDAN{" "}
+                                <span className="text-[#97C46B] drop-shadow-[0_2px_0_rgba(0,0,0,0.35)]">
+                                    2004
+                                </span>
+                            </span>
+                        </h1>
 
-                    <a
-                        href="#services"
-                        className="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/85 transition hover:border-white/25 hover:text-white"
-                    >
-                        Se hur vi jobbar
-                    </a>
+                        {/* Divider */}
+                        <div className="mx-auto mt-10 h-px w-full max-w-xl bg-white/35" />
+
+                        {/* Body */}
+                        <p className="mx-auto mt-8 max-w-3xl text-base sm:text-lg leading-relaxed text-white/85">
+                            TradeCom arbetar med en försäljningsform som kallas för direktförsäljning,
+                            även kallad fieldmarketing eller eventförsäljning. Vi söker helt enkelt upp
+                            kunderna där de finns – på offentliga platser eller i hemmet. Sedan 2004 har
+                            vi arbetat med att vässa våra kunskaper och färdigheter inom detta område –
+                            något som gjort oss till ett av de främsta fieldmarketing-företagen i Sverige.
+                        </p>
+
+                        {/* CTA */}
+                        <div className="mt-12 flex justify-center">
+                            <a
+                                href="#boka-mote"
+                                className="inline-flex items-center justify-center rounded-xl bg-[#97C46B]
+                           px-8 py-4
+                           text-sm font-semibold uppercase tracking-[0.14em]
+                           text-black
+                           shadow-lg shadow-black/25
+                           transition hover:brightness-95
+                           focus:outline-none focus:ring-2 focus:ring-[#97C46B]/60"
+                            >
+                                Boka ett möte
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 }
