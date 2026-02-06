@@ -1,40 +1,59 @@
-// app/Header.tsx
+import Link from "next/link";
+import Image from "next/image";
+
 export default function Header() {
     return (
-        <header className="bg-transparent absolute top-0 left-0 w-full z-50 pt-4">
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-                <a href="#" className="text-sm font-semibold tracking-wide">
-                    Tradecom
-                </a>
+        <header className="absolute top-0 left-0 z-50 w-full bg-transparent pt-10 pb-6">
+            <div className="mx-auto max-w-7xl px-2">
+                <div className="flex items-center justify-between">
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center">
+                        <Image
+                            src="/logo-tradecom-white.png"
+                            alt="Tradecom"
+                            width={220}
+                            height={48}
+                            priority
+                        />
+                    </Link>
 
-                <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
-                    <a className="transition hover:text-white" href="#services">
-                        Tjänster
-                    </a>
-                    <a className="transition hover:text-white" href="#cases">
-                        Case
-                    </a>
-                    <a className="transition hover:text-white" href="#contact">
-                        Kontakt
-                    </a>
-                </nav>
+                    {/* Navigation */}
+                    <nav className="hidden md:flex items-center gap-8 text-sm">
 
-                <div className="flex items-center gap-3">
-                    <a
-                        href="#cases"
-                        className="hidden rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 transition hover:border-white/25 hover:text-white md:inline-flex"
-                    >
-                        Se case
-                    </a>
+                        <Link href="/about" className="text-white/80 hover:text-white transition">
+                            Om Tradecom
+                        </Link>
 
-                    <a
-                        href="#contact"
-                        className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90"
-                    >
-                        Boka intro
-                    </a>
+                        <Link href="/vitalplus" className="text-white/80 hover:text-white transition">
+                            Om Vitalplus
+                        </Link>
+
+                    </nav>
+
+                    {/* Actions */}
+                    <div className="flex items-center gap-4">
+                        {/* <Link
+                            href="#case"
+                            className="hidden sm:inline-flex items-center justify-center rounded-full border border-white/30 px-5 py-2 text-xs uppercase tracking-wider text-white/80 hover:border-white hover:text-white transition"
+                        >
+                            Se case
+                        </Link> */}
+                        <a
+                            href="mailto:info@tradecom.se?subject=Boka%20ett%20möte%20-%20Tradecom"
+                            className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-xs font-semibold uppercase tracking-wider text-black hover:bg-white/90 transition" // behåll dina klasser
+                        >
+                            BOKA ETT MÖTE
+                        </a>
+
+                    </div>
                 </div>
             </div>
-        </header >
+            {/* Divider under header */}
+            <div className="absolute bottom-0 left-0 w-full flex justify-center pointer-events-none">
+                <div className="h-px w-full max-w-[calc(100%-2cm)] bg-[#97C46B] opacity-80" />
+
+            </div>
+
+        </header>
     );
 }

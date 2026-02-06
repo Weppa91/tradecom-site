@@ -7,6 +7,11 @@
   --border: rgba(255, 255, 255, 0.08);
   --text: #eaeaea;
   --muted: #a1a1a1;
+  --font-recoleta: var(--font-recoleta);
+}
+
+.font-recoleta {
+  font-family: var(--font-recoleta), serif;
 }
 
 /* ===== Base styles ===== */
@@ -28,4 +33,19 @@ body {
 
 .card {
   @apply rounded-2xl border border-white/10 bg-white/[0.02] p-6;
+}
+
+h1 {
+  font-family: var(--font-recoleta), serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: var(--font-recoleta), serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: var(--font-recoleta), serif;
+  font-weight: 600;
 }

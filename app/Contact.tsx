@@ -22,20 +22,9 @@ export default function Contact() {
                             >
                                 info@tradecom.se
                             </a>
-
-                            <a
-                                href="#services"
-                                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm text-white/85 hover:border-white/30 hover:bg-white/10 transition"
-                            >
-                                Se tjänster
-                            </a>
                         </div>
                     </div>
                 </div>
-
-                <p className="mt-6 text-xs text-white/45">
-                    © {new Date().getFullYear()} Tradecom
-                </p>
             </div>
         </section>
     );

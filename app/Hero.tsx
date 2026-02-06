@@ -5,7 +5,7 @@ export default function Hero() {
     return (
         // FULL-BLEED WRAPPER: bryter ut ur ev. max-w container i layout/page
         <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen overflow-x-clip">
-            <section className="relative isolate h-screen w-screen overflow-hidden">
+            <section className="relative isolate min-h-[90vh] w-screen overflow-hidden">
                 {/* Background image – fill viewport */}
                 <div
                     className="absolute inset-0 bg-cover bg-center"
@@ -28,17 +28,17 @@ export default function Hero() {
 
                 {/* Content */}
                 <div className="relative flex h-full w-full justify-center">
-                    <div className="w-full max-w-6xl px-6 pt-24 sm:pt-28 lg:pt-32 text-center">
+                    <div className="w-full max-w-6xl px-6 pt-24 sm:pt-28 lg:pt-50 text-center">
                         {/* Headline */}
                         <h1 className="font-serif uppercase tracking-[0.12em] text-white [text-wrap:balance]">
-                            <span className="block text-6xl sm:text-7xl lg:text-[96px] xl:text-[120px] leading-[0.85]">
+                            <span className="block text-2xl sm:text-3xl lg:text-[60px] xl:text-[76px] leading-[0.9]">
                                 FIELD{" "}
                                 <span className="text-[#97C46B] drop-shadow-[0_2px_0_rgba(0,0,0,0.35)]">
                                     MARKETING
                                 </span>
                             </span>
 
-                            <span className="mt-2 block text-5xl sm:text-6xl lg:text-[80px] xl:text-[96px] leading-[0.9]">
+                            <span className="mt-2 block text-5xl sm:text-6xl lg:text-[60px] xl:text-[76px] leading-[0.79">
                                 SEDAN{" "}
                                 <span className="text-[#97C46B] drop-shadow-[0_2px_0_rgba(0,0,0,0.35)]">
                                     2004

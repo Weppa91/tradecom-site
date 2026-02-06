@@ -1,11 +1,23 @@
 // app/layout.tsx
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import type { Metadata } from "next";
 
-export const metadata = {
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-recoleta",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
   title: "Tradecom",
   description: "E-handel, integrationer och strategi som skalar.",
+  icons: {
+    icon: "/favicon-tradecom.png",
+  },
 };
 
 export default function RootLayout({
@@ -14,14 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="sv" className="h-full">
-      <body className="min-h-full bg-[#050505] text-white antialiased">
+    <html lang="sv" className={playfair.variable}>
+      <body className="min-h-full bg-[#050505] text-white antialiased overflow-x-hidden">
         <Header />
+        <main className="w-full">{children}</main>
 
-        <main className="mx-auto max-w-6xl px-6 pt-24">{children}</main>
+        {/* Global divider – alltid samma */}
+        <div className="h-[2px] w-full bg-[#9BC26B]" />
 
         <Footer />
       </body>
+
     </html>
   );
 }
