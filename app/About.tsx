@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <section className="w-full bg-white text-black">
+        <section data-theme="light" className="w-full bg-white text-black">
             {/* Fullbredd-wrapper */}
             <div className="w-full px-6 py-28">
                 {/* Asymmetrisk layout */}

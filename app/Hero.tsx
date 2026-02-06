@@ -6,7 +6,7 @@ export default function Hero() {
         // FULL-BLEED WRAPPER: bryter ut ur ev. max-w container i layout/page
 
         <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen overflow-x-clip">
-            <section className="relative min-h-[90vh] pt-10">
+            <section data-theme="light" className="bg-whiterelative min-h-[90vh] pt-[clamp(72px,8vh,96px)]">
                 {/* Background image – fill viewport */}
                 <div
                     className="absolute inset-0 bg-cover bg-center"

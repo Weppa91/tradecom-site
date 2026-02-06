@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Tradecom",
     images: [
       {
-        url: "/og/og-default.jpg",
+        url: "/og/og-tradecom.jpg",
         width: 1200,
         height: 630,
         alt: "Tradecom – Field marketing sedan 2004",

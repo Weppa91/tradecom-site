@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-        <section id="contact" className="border-t border-white/10">
+        <section data-theme="light" id="contact" className="border-t border-white/10">
             <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
                 <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
                     <div className="pointer-events-none absolute inset-0">

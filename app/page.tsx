@@ -14,7 +14,7 @@ export default function Page() {
       <About />
 
       {/* Hero premium-blocket */}
-      <section className="relative w-full h-[60vh] min-h-[420px] flex items-center justify-center overflow-hidden">
+      <section data-theme="light" className="relative w-full h-[60vh] min-h-[420px] flex items-center justify-center overflow-hidden">
         {/* Bakgrundsbild */}
         <div
           className="absolute inset-0 bg-cover bg-center"
