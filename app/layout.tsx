@@ -14,7 +14,23 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Tradecom",
-  description: "E-handel, integrationer och strategi som skalar.",
+  description: "Field marketing sedan 2004",
+  openGraph: {
+    title: "Tradecom",
+    description: "Field marketing sedan 2004",
+    url: "https://tradecom.se",
+    siteName: "Tradecom",
+    images: [
+      {
+        url: "/og/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tradecom – Field marketing sedan 2004",
+      },
+    ],
+    locale: "sv_SE",
+    type: "website",
+  },
   icons: {
     icon: "/favicon-tradecom.png",
   },
