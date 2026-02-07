@@ -1,7 +1,6 @@
 type PageSplitHeroProps = {
     title: string;
-    // Ex: "KVALITETS" + "ARBETE" (där sista ordet blir grönt)
-    titleAccent?: { prefix: string; accent: string };
+    prefix?: string;
     subtitle?: string;
     paragraphs: string[];
     bullets?: string[];
@@ -11,7 +10,7 @@ type PageSplitHeroProps = {
 
 export default function PageSplitHero({
     title,
-    titleAccent,
+    prefix,
     subtitle,
     paragraphs,
     bullets,
@@ -24,11 +23,11 @@ export default function PageSplitHero({
                 <div className="grid items-center gap-14 md:grid-cols-2">
                     {/* Image */}
                     <div className="flex justify-center md:justify-start">
-                        <div className="overflow-hidden rounded-2xl bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+                        <div className="overflow-hidden rounded-2xl bg-white/5 shadow-[0_2px_0_rgba(0,0,0,0.35)]">
                             <img
                                 src={imageSrc}
                                 alt={imageAlt}
-                                className="w-full h-auto max-h-[360px] object-contain p-6"
+                                className="w-full h-auto max-h-[240px] sm:max-h-[320px] lg:max-h-[360px] object-cover sm:object-contain p-3 sm:p-6"
                             />
                         </div>
 
@@ -36,12 +35,21 @@ export default function PageSplitHero({
 
                     {/* Text */}
                     <div className="max-w-xl">
-                        <h1 className="font-serif text-5xl tracking-wide md:text-6xl">
-                            <span className="text-white">OM </span>
-                            <span className="text-[#9BCB68]">
-                                {title.replace(/^OM\s+/i, "")}
+                        <h1 className="font-serif text-4xl sm:text-5xl tracking-wide md:text-6xl">
+                            {prefix && (
+                                <span className="text-white">
+                                    {prefix}{" "}
+                                </span>
+                            )}
+
+                            <span className="text-[#97C46B] break-words md:whitespace-nowrap">
+                                {title}
                             </span>
                         </h1>
+
+
+
+
 
 
                         {subtitle ? (

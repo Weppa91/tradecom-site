@@ -32,14 +32,13 @@ export default function Hero() {
                     <div className="w-full max-w-6xl px-6 pt-24 sm:pt-28 lg:pt-50 text-center">
                         {/* Headline */}
                         <h1 className="font-serif uppercase tracking-[0.12em] text-white [text-wrap:balance]">
-                            <span className="block text-2xl sm:text-3xl lg:text-[60px] xl:text-[76px] leading-[0.9]">
+                            <span className="block text-5xl sm:text-6xl lg:text-[60px] xl:text-[76px] leading-[0.9]">
                                 FIELD{" "}
-                                <span className="text-[#97C46B] drop-shadow-[0_2px_0_rgba(0,0,0,0.35)]">
-                                    MARKETING
-                                </span>
+                                <span className="text-[#97C46B] ...">MARKETING</span>
                             </span>
 
-                            <span className="mt-2 block text-5xl sm:text-6xl lg:text-[60px] xl:text-[76px] leading-[0.79">
+
+                            <span className="mt-2 block text-4xl sm:text-6xl lg:text-[60px] xl:text-[76px] leading-[0.79">
                                 SEDAN{" "}
                                 <span className="text-[#97C46B] drop-shadow-[0_2px_0_rgba(0,0,0,0.35)]">
                                     2004
