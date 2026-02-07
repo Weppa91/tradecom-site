@@ -32,7 +32,7 @@ const cards: Card[] = [
 
 export default function ThreeCtaCards() {
     return (
-        <section className="bg-white">
+        <section id="three-cta-cards" data-header-theme="light" className="bg-white">
             <div className="mx-auto max-w-6xl px-6 py-16">
                 <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-10">
                     {cards.map((card) => (

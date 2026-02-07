@@ -13,6 +13,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("http://localhost:3000"),
   title: "Tradecom",
   description: "Field marketing sedan 2004",
   openGraph: {
@@ -46,9 +47,6 @@ export default function RootLayout({
       <body className="min-h-full bg-[#050505] text-white antialiased overflow-x-hidden">
         <Header />
         <main className="w-full">{children}</main>
-
-        {/* Global divider – alltid samma */}
-        <div className="h-[2px] w-full bg-[#9BC26B]" />
 
         <Footer />
       </body>

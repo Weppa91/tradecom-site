@@ -33,7 +33,7 @@ const cards: Card[] = [
 
 export default function ThreeTextCards() {
     return (
-        <section className="bg-white">
+        <section id="three-text-cards" data-header-theme="light" className="bg-white">
             <div className="mx-auto max-w-6xl px-6 py-20">
                 <div className="grid grid-cols-1 gap-16 md:grid-cols-3 md:gap-12">
                     {cards.map((card) => (
