@@ -60,14 +60,14 @@ export default function Hero() {
                         {/* CTA */}
                         <div className="mt-12 flex justify-center">
                             <a
-                                href="#boka-mote"
+                                href="mailto:info@tradecom.se"
                                 className="inline-flex items-center justify-center rounded-xl bg-[#97C46B]
-                           px-8 py-4
-                           text-sm font-semibold uppercase tracking-[0.14em]
-                           text-black
-                           shadow-lg shadow-black/25
-                           transition hover:brightness-95
-                           focus:outline-none focus:ring-2 focus:ring-[#97C46B]/60"
+                                        px-8 py-4
+                                        text-sm font-semibold uppercase tracking-[0.14em]
+                                        text-black
+                                        shadow-lg shadow-black/25
+                                        transition hover:brightness-95
+                                        focus:outline-none focus:ring-2 focus:ring-[#97C46B]/60"
                             >
                                 Boka ett möte
                             </a>

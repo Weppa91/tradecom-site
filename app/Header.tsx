@@ -88,12 +88,12 @@ export default function Header() {
                             className={`hidden md:block transition-all duration-300 ${isScrolled ? "opacity-0 pointer-events-none -translate-y-1" : ""
                                 }`}
                         >
-                            <Link
-                                href="https://tradecom.se/bookdemo"
+                            <a
+                                href="mailto:info@tradecom.se?subject=Bokningsförfrågan Tradecom"
                                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black"
                             >
                                 BOKA ETT MÖTE
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
