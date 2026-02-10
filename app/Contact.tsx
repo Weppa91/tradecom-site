@@ -17,7 +17,7 @@ export default function Contact() {
 
                         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                             <a
-                                href="mailto:hello@tradecom.se"
+                                href="mailto:info@tradecom.se"
                                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black hover:bg-white/90 transition"
                             >
                                 info@tradecom.se
